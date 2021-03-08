@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import NavBar from '../../components/Navbar'
 
-export default class index extends PureComponent {
+export default class Homepage extends PureComponent {
     static propTypes = {
 
     }
@@ -9,7 +9,7 @@ export default class index extends PureComponent {
     render() {
         return (
             <div>
-                
+                <NavBar />
             </div>
         )
     }
