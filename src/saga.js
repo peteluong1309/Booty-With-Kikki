@@ -1,11 +1,11 @@
-import {call, put, takeEvery, takeLatest, all } from 'redux-saga/effects';
+// import {call, put, takeEvery, takeLatest, all } from 'redux-saga/effects';
 
-function* example(){
-    console.log('test');
-}
+// function* example(){
+//     console.log('test');
+// }
 
-export default function* rootSage(){
-    yield all([
-        example(),
-    ])
-};
+// export default function* rootSage(){
+//     yield all([
+//         example(),
+//     ])
+// };
