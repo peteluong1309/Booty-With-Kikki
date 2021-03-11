@@ -2,6 +2,11 @@ import React from "react";
 import { AppBar, Link, Toolbar, Typography } from "@material-ui/core";
 import styles from './styles.module.scss'
 
+const navItem = [
+  {value: 'Workout Plan', path: '/workout-plan'},
+  {value: 'Meal Plan', path: '/meal-plan'},
+]
+
 const NavBar = (props) => {
 //   const classes = useStyles();
   return (
