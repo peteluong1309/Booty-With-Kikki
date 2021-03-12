@@ -1,12 +1,37 @@
-:local(.base) {
-    .tyson_toolbar {
-        text-align: center;
-       .tyson_text {
-           .tyson_link {
-               color: #fff;
-               text-decoration: none;
-               font-weight: 700;
-           }
-       }
+:local(.root) {
+  //   .root {
+  .tyson {
+    &_toolbar {
+      display: flex;
+      justify-content: space-around;
+      background: white;
+      &_icon {
+        width: 100px;
+        background: #fff;
+      }
+      &_list {
+        display: flex;
+        justify-content: space-between;
+        .listItemLink {
+          &_item {
+            text-decoration: none;
+            color: pink;
+            transition: all .5s;
+            width: 250px;
+            &:hover {
+                background: pink;
+                color: white;
+            }
+            &_text {
+              span {
+                font-weight: 700;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      // }
     }
+  }
 }
