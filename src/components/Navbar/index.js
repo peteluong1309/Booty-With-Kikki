@@ -39,12 +39,18 @@ const NavBar = (props) => {
             );
           })}
         </List>
-        <IconButton>
-          <ShoppingCart />          
-        </IconButton>  
-        <IconButton>
-          <AccountCircle />          
-        </IconButton>  
+        <List className={styles.tyson_toolbar_list}>
+          <ListItem className={styles.listItemLink}>
+            <IconButton>
+              <ShoppingCart />
+            </IconButton>
+          </ListItem>
+          <ListItem className={styles.listItemLink}>
+            <IconButton>
+              <AccountCircle />
+            </IconButton>
+          </ListItem>
+        </List>
       </Toolbar>
     </AppBar>
   );
