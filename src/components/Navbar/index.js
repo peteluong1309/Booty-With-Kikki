@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   IconButton,
   List,
   ListItem,
   ListItemText,
+  Menu,
+  MenuItem,
   Toolbar,
+  withStyles,
 } from "@material-ui/core";
 import styles from "./styles.module.scss";
 import { AccountCircle, HomeRounded, ShoppingCart } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const navItem = [
   { value: "Workout Plan", path: "/workout-plan" },
@@ -17,8 +21,24 @@ const navItem = [
   { value: "About", path: "/about" },
 ];
 
+const  StyleMenuContainer = withStyles({
+  paper: {
+    top: '60px !important',
+  }
+})(Menu)
+
 const NavBar = (props) => {
   //   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (e) => {
+    setAnchorEl(e.target)
+  }
+  
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
   return (
     <AppBar className={styles.root}>
       <Toolbar className={styles.tyson_toolbar}>
@@ -29,12 +49,12 @@ const NavBar = (props) => {
           {navItem.map((item) => {
             return (
               <ListItem className={styles.listItemLink}>
-                <a href={item.path} className={styles.listItemLink_item}>
+                <Link to={item.path} className={styles.listItemLink_item}>
                   <ListItemText
                     className={styles.listItemLink_item_text}
                     primary={item.value}
                   />
-                </a>
+                </Link>
               </ListItem>
             );
           })}
@@ -46,9 +66,16 @@ const NavBar = (props) => {
             </IconButton>
           </ListItem>
           <ListItem className={styles.listItemLink}>
-            <IconButton>
+            <IconButton onClick={handleClick}>
               <AccountCircle />
             </IconButton>
+            
+            {/* menu */}
+            <StyleMenuContainer anchorEl={anchorEl} open={Boolean(anchorEl)}
+        onClose={handleClose}>
+              <MenuItem>Sign in</MenuItem>
+              <MenuItem>Sign up</MenuItem>
+            </StyleMenuContainer>
           </ListItem>
         </List>
       </Toolbar>

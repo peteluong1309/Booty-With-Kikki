@@ -9,7 +9,7 @@ export default class Homepage extends PureComponent {
     render() {
         return (
             <div>
-                <NavBar />
+                {/* <NavBar /> */}
             </div>
         )
     }
