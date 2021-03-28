@@ -1,40 +1,38 @@
 import React from "react";
+import {} from '@material-ui/core'
+import s from './styles.module.scss';
+import classnames from 'classnames';
 
 const Carousel = () => {
   return (
-    <>
-      <div className="container">
-        <div class="mySlides fade">
-          <div class="">1 / 3</div>
-          <img src="fav" alt="this is test" />
-          <div class="text">Caption Text</div>
+    <div className="s.root">
+      <div className="s.root__container">
+        <div className={classnames(s.root__container__mySlides, s.root__container__fade)}>
+          {/* <div class="">1 / 3</div> */}
+          <img src="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" className={s.image} alt="this is test" />
+          <div className={s.text}>Caption Text</div>
         </div>
 
-        <div class="mySlides fade">
-          <div class="">2 / 3</div>
-          <img src="fav" alt="this is test" />
-          <div class="text">Caption Two</div>
+        <div className={classnames(s.root__container__mySlides, s.root__container__fade)}>
+          {/* <div class="">2 / 3</div> */}
+          <img src="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" className={s.image} alt="this is test" />
+          <div className={s.text}>Caption Two</div>
         </div>
 
-        <div class="mySlides fade">
-          <div class="">3 / 3</div>
-          <img src="fav" alt="this is test" />
-          <div class="text">Caption Three</div>
+        <div className={classnames(s.root__container__mySlides, s.root__container__fade)}>
+          {/* <div class="">3 / 3</div> */}
+          <img src="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg" className={s.image} alt="this is test" />
+          <div className={s.text}>Caption Three</div>
         </div>
 
-        <a class="prev" onclick="plusSlides(-1)">
-          &#10094;
-        </a>
-        <a class="next" onclick="plusSlides(1)">
-          &#10095;
-        </a>
+        
       </div>
       <div>
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-    </>
+    </div>
   );
 };
 

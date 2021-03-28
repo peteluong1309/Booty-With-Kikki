@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import Carousel from '../../components/Carousel'
 
 export default class Homepage extends PureComponent {
@@ -8,10 +8,10 @@ export default class Homepage extends PureComponent {
 
     render() {
         return (
-            <div>
+            <Fragment>
                 {/* <NavBar /> */}
                 <Carousel />
-            </div>
+            </Fragment>
         )
     }
 }
