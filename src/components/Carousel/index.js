@@ -26,10 +26,10 @@ const Carousel = () => {
           <div className={s.text}>Caption Three</div>
         </div>
 
-        <Link className={s.previous}>
+        <Link className={s.root__previous}>
           <ArrowBackIosOutlined />
         </Link>
-        <Link className={s.next}>
+        <Link className={s.root__next}>
           <ArrowForwardIosOutlined />
         </Link>
       </div>
