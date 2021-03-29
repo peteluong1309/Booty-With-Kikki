@@ -1,7 +1,8 @@
 import React from "react";
-import {} from '@material-ui/core'
+import { Link } from '@material-ui/core'
 import s from './styles.module.scss';
 import classnames from 'classnames';
+import { ArrowBackIosOutlined, ArrowForwardIosOutlined } from "@material-ui/icons";
 
 const Carousel = () => {
   return (
@@ -25,7 +26,12 @@ const Carousel = () => {
           <div className={s.text}>Caption Three</div>
         </div>
 
-        
+        <Link className={s.previous}>
+          <ArrowBackIosOutlined />
+        </Link>
+        <Link className={s.next}>
+          <ArrowForwardIosOutlined />
+        </Link>
       </div>
       <div>
         <span class="dot" onclick="currentSlide(1)"></span>
