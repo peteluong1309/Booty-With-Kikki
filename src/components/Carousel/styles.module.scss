@@ -14,7 +14,7 @@
 //   }
 //   .image {
 //   }
-  &__previous {
+  &__previous,  &__next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -27,8 +27,5 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  &__next {
-      @extend .root__previous;
   }
 }
